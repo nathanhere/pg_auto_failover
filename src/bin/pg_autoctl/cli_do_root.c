@@ -247,7 +247,7 @@ keeper_cli_keeper_setup_getopts(int argc, char **argv)
 	unsetenv("POSIXLY_CORRECT");
 
 	optind = cli_create_node_getopts(argc, argv,
-									 long_options, "C:D:H:p:l:y:U:A:d:n:f:g:m:RVvqhP:r:",
+									 long_options, "+C:D:H:p:l:y:U:A:d:n:f:g:m:RVvqhP:r:",
 									 &options);
 
 	/* publish our option parsing in the global variable */

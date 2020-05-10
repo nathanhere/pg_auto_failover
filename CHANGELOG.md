@@ -1,3 +1,7 @@
+### pg_auto_failover v1.2 MOD (May 10, 2020) ###
+
+* Updated various getopt_long calls based on changes observed by RekGRpth in repo https://github.com/RekGRpth/pg_auto_failover. This change supposedly fixed the bug in the Alpine based images that would not recognize pg_autoctl options as valid. This branch is based on a fork of the Citus pg_auto_failover repo as seen on April 24, 2020. This is an attempt to build from this branch because (suspected) something in the latest package manager in Citus pg_auto_failover v1.2 seems to have broken functionality (Docker images built on this date work flawlessly).
+
 ### pg_auto_failover v1.2 (March 17, 2020) ###
 
 * Feature implement an option (--skip-pg-hba) to skip editing of HBA rules by pg_autoctl (#169)
