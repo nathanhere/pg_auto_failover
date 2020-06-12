@@ -687,7 +687,7 @@ cli_getopt_pgdata(int argc, char **argv)
 	 */
 	unsetenv("POSIXLY_CORRECT");
 
-	while ((c = getopt_long(argc, argv, "D:JVvqh",
+	while ((c = getopt_long(argc, argv, "+D:JVvqh",
 							long_options, &option_index)) != -1)
 	{
 		switch (c)
@@ -1048,7 +1048,7 @@ cli_print_version_getopts(int argc, char **argv)
 	 */
 	unsetenv("POSIXLY_CORRECT");
 
-	while ((c = getopt_long(argc, argv, "JVvqh",
+	while ((c = getopt_long(argc, argv, "+JVvqh",
 							long_options, &option_index)) != -1)
 	{
 		switch (c)

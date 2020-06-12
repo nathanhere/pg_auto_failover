@@ -77,7 +77,7 @@ keeper_cli_formation_getopts(int argc, char **argv)
 
 	optind = 0;
 
-	while ((c = getopt_long(argc, argv, "D:f:Vvqh",
+	while ((c = getopt_long(argc, argv, "+D:f:Vvqh",
 							long_options, &option_index)) != -1)
 	{
 		switch (c)
@@ -201,7 +201,7 @@ keeper_cli_formation_create_getopts(int argc, char **argv)
 	/* set defaults for formations */
 	options.formationHasSecondary = true;
 
-	while ((c = getopt_long(argc, argv, "D:f:k:sSVvqhn:",
+	while ((c = getopt_long(argc, argv, "+D:f:k:sSVvqhn:",
 							long_options, &option_index)) != -1)
 	{
 		switch (c)
