@@ -137,8 +137,6 @@ fopen_with_umask(const char *filePath, const char *modes, int flags, mode_t umas
 	if (fileDescriptor == -1)
 	{
 		log_error("Failed to open file \"%s\": %m", filePath);
-		log_error(flags);
-		log_error(umask);
 		return NULL;
 	}
 
@@ -146,8 +144,6 @@ fopen_with_umask(const char *filePath, const char *modes, int flags, mode_t umas
 	if (fileStream == NULL)
 	{
 		log_error("Failed to open file \"%s\": %m", filePath);
-		log_error(fileDescriptor);
-		log_error(modes);
 		close(fileDescriptor);
 	}
 	return fileStream;
@@ -254,7 +250,6 @@ read_file(const char *filePath, char **contents, long *fileSize)
 	if (fileStream == NULL)
 	{
 		log_error("Failed to open file \"%s\": %m", filePath);
-		log_error("fileStream Error")
 		return false;
 	}
 
